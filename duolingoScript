@@ -1,0 +1,55 @@
+----------------------SQL SCRIPT--------------------------------------
+
+create database LangLearnDB;
+– 
+create table AccountDb (
+	accountID int not null auto_increment,
+	firstName varchar(50)  not null,
+	lastName varchar(50) not null,
+	email varchar(50) unique,
+	phone varchar(10) unique,
+    points long not null,
+    streaks int not null,
+    primary key(accountID)
+);
+
+create table Login(
+    loginID int not null auto_increment,
+    username varchar(20) unique not null,
+    password varchar(16) not null,
+    accountID int not null,
+    primary key(loginID)
+);
+
+create table Relationship(
+-- they can be follow, mutal, blocked 
+    followRelationshipID int not null,
+    accountID int not null,
+    account2ID int not null,
+    statusRelationship varchar(7),
+    PRIMARY KEY(followRelationshipID),
+    FOREIGN KEY(accountID) references accountDb,
+    FOREIGN KEY(account2ID) references accountDb,
+    CHECK (accountID != account2ID)
+);
+
+create table taskDb(
+    taskID int,
+    task varchar(100),
+    PRIMARY KEY(taskID)
+);
+create table achievementDb(
+    achievementID int not null,
+    title varchar(20) not null,
+    pointNeccessery long,
+    streaksNeccessery int,
+    PRIMARY KEY(achievementID),
+    FOREIGN KEY(accountID) references accountDb
+); 
+
+create table languageList(
+    languageId int auto_increment,
+    languageName varchar(30),
+    hasAphabet boolean,
+    PRIMARY KEY(languageId)
+);
