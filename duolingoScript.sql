@@ -108,3 +108,35 @@ insert into Login(accountID, username, password)
 values(41, 'petia1', 'cvetcova');
 insert into Login(accountID, username, password)
 values(31, 'ivana', 'password');
+-----------------
+– wildfire
+insert into achievementDb(title, pointNeccessery, streaksNeccessery)
+values('Wildfire Level 1',null, 3);
+insert into achievementDb(title, pointNeccessery, streaksNeccessery)
+values('Wildfire Level 2',null, 7);
+insert into achievementDb(title, pointNeccessery, streaksNeccessery)
+values('Wildfire Level 3',null, 30);
+insert into achievementDb(title, pointNeccessery, streaksNeccessery)
+values('Wildfire Level 4',null, 50);
+insert into achievementDb(title, pointNeccessery, streaksNeccessery)
+values('Wildfire Level 5',null, 75);
+-- sage
+insert into achievementDb(title, pointNeccessery, streaksNeccessery)
+values('Sage Level 1',250,null);
+insert into achievementDb(title, pointNeccessery, streaksNeccessery)
+values('Sage Level 2',1000,null);
+insert into achievementDb(title, pointNeccessery, streaksNeccessery)
+values('Sage Level 3',4000,null);
+insert into achievementDb(title, pointNeccessery, streaksNeccessery)
+values('Sage Level 4',12500,null);
+insert into achievementDb(title, pointNeccessery, streaksNeccessery)
+values('Sage Level 5',30000,null);
+--conquer
+insert into achievementDb(title, pointNeccessery, streaksNeccessery)
+values('Conqueror Level 1',1000,3);
+insert into achievementDb(title, pointNeccessery, streaksNeccessery)
+values('Conqueror Level 2',12500,10);
+insert into achievementDb(title, pointNeccessery, streaksNeccessery)
+values('Conqueror Level 3',30000, 15);
+insert into achievementDb(title, pointNeccessery, streaksNeccessery)
+values('Conqueror Level 4',50000, 20); 
