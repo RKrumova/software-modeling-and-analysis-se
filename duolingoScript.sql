@@ -98,6 +98,7 @@ values('Hrisi', 'Boqnova', 'hbt23a@abv.bg', 0884567810, 200, 1);
        values('Yourdan', 'Kirilov', 'inti521008@gmail.com', 0884681223, 500, 1); 
        insert into AccountDb(firstName, lastName, email,phone, points, streaks)
        values('Diana', 'Marinova', 'inti520002@gmail.com', 08848101222, 500, 1);
+
 ---------------
 
 insert into Login(accountID, username, password)
@@ -140,3 +141,7 @@ insert into achievementDb(title, pointNeccessery, streaksNeccessery)
 values('Conqueror Level 3',30000, 15);
 insert into achievementDb(title, pointNeccessery, streaksNeccessery)
 values('Conqueror Level 4',50000, 20); 
+----
+Update AccountDb set streaks = 8 where firstName='Maria'
+insert into languageList(languageName) values('french'),('spanish'),('german'),('irish');
+insert into languageList(languageName, hasAphabet) values('russian', 1),('chinese', 1);
