@@ -53,6 +53,38 @@ create table languageList(
     hasAphabet tinyint, --s 0, if false, and 1, if true,
     PRIMARY KEY(languageId)
 );
+create table dictunaryFrench(
+	--languageId varchar(3) not null,
+	word varchar(28) not null unique,
+	pronunciation varchar(50) not null,
+	PRIMARY KEY(word),
+);
+create table dictunarySpanish(
+	word varchar(31) not null unique,
+	pronunciation varchar(50) not null,
+	PRIMARY KEY(word),
+);
+create table dictunaryGerman(
+	--languageId varchar(3) not null,
+	word varchar(36) not null unique,
+	pronunciation varchar(50) not null,
+	PRIMARY KEY(word),
+);
+create table dictunaryIrish(
+	word varchar(28) not null unique,
+	pronunciation varchar(50) not null,
+	PRIMARY KEY(word),
+);
+create table dictunaryRussian(
+	word varchar(28) not null unique,
+	pronunciation varchar(50) not null,
+	PRIMARY KEY(word),
+);
+create table dictunaryChinese(
+	word varchar(28) not null unique,
+	pronunciation varchar(50) not null,
+	PRIMARY KEY(word),
+);
 -------------------------------------------------insert-----------------------
 
 insert into AccountDb(firstName, lastName, email,phone, points, streaks)
@@ -145,3 +177,4 @@ values('Conqueror Level 4',50000, 20);
 Update AccountDb set streaks = 8 where firstName='Maria'
 insert into languageList(languageName) values('french'),('spanish'),('german'),('irish');
 insert into languageList(languageName, hasAphabet) values('russian', 1),('chinese', 1);
+--------------------------------
