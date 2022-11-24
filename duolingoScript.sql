@@ -53,39 +53,47 @@ create table languageList(
     hasAphabet tinyint, --s 0, if false, and 1, if true,
     PRIMARY KEY(languageId)
 );
+
 create table dictunaryFrench(
 	--languageId varchar(3) not null,
 	word varchar(28) not null unique,
 	pronunciation varchar(50) not null,
+	englishCorrespond varchar(50) not null,
 	PRIMARY KEY(word),
 );
 create table dictunarySpanish(
 	word varchar(28) not null unique,
 	pronunciation varchar(50) not null,
+	englishCorrespond varchar(50) not null,
 	PRIMARY KEY(word),
 );
 create table dictunaryGerman(
 	--languageId varchar(3) not null,
 	word varchar(28) not null unique,
 	pronunciation varchar(50) not null,
+	englishCorrespond varchar(50) not null,
 	PRIMARY KEY(word),
 );
 create table dictunaryIrish(
 	word varchar(28) not null unique,
 	pronunciation varchar(50) not null,
+	englishCorrespond varchar(50) not null,
 	PRIMARY KEY(word),
 );
 create table dictunaryRussian(
 	--languageId varchar(3) not null,
 	word varchar(28) not null unique,
 	pronunciation varchar(50) not null,
+	englishCorrespond varchar(50) not null,
 	PRIMARY KEY(word),
 );
 create table dictunaryChinese(
 	word varchar(28) not null unique,
 	pronunciation varchar(50) not null,
+	englishCorrespond varchar(50) not null,
 	PRIMARY KEY(word),
 );
+
 -------------------------------------------------insert-----------------------
 
 insert into AccountDb(firstName, lastName, email,phone, points, streaks)
@@ -179,3 +187,25 @@ Update AccountDb set streaks = 8 where firstName='Maria'
 insert into languageList(languageName) values('french'),('spanish'),('german'),('irish');
 insert into languageList(languageName, hasAphabet) values('russian', 1),('chinese', 1);
 --------------------------------
+insert into dictunaryFrench(englishCorrespond, word, pronunciation)
+values('Cat','chat','shah');
+insert into dictunaryFrench(englishCorrespond, word, pronunciation)
+values('Butterfly','Le papillon','Luh papee-on');
+insert into dictunaryFrench(englishCorrespond, word, pronunciation)
+values('Dog', 'Le chien', 'Luh sheeang');
+insert into dictunaryFrench(englishCorrespond, word, pronunciation)
+values('Fish', 'Le poisson','Luh pwasson ');
+insert into dictunaryFrench(englishCorrespond, word, pronunciation)
+values('Cow', 'La vache','La vash ');
+insert into dictunaryFrench(englishCorrespond, word, pronunciation)
+values('Horse', 'Le cheval', 'Luh shuh-val');
+insert into dictunaryFrench(englishCorrespond, word, pronunciation)
+values('Pig', 'Le cochon', 'Luh koshon');
+insert into dictunarySpanish(word, pronunciation, englishCorrespond)
+values('Los Acuaticos', 'Los Acuaticos', 'Aquatic');
+insert into dictunarySpanish(word, pronunciation, englishCorrespond)
+values('Los Domesticos','Los Domesticos','Domestic');
+insert into dictunarySpanish(word, pronunciation, englishCorrespond)
+values('Los Insectos', 'Los Insectos','Insects');
+insert into dictunarySpanish(word, pronunciation, englishCorrespond)
+values('Las Aves', 'Las Aves','Birds');
