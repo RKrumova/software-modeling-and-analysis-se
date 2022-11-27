@@ -109,6 +109,17 @@ From LanguageLearners
 Inner join languageList 
 On languageList.languageId=languageList.languageName;
 
+----
+CREATE TRIGGER deleteUser 
+    ON AccountDb
+	FOR Delete 
+	as
+		for each row
+	Begin
+    delete from Login where lOGIN.accountID = accountID;	
+	END ;;
+----
+
 -------------------------------------------------insert-----------------------
 
 insert into AccountDb(firstName, lastName, email,phone, points, streaks)
