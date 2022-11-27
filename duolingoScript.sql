@@ -93,6 +93,21 @@ create table dictunaryChinese(
 	englishCorrespond varchar(50) not null,
 	PRIMARY KEY(word),
 );
+create table langUserConnection(
+	id int identity(1,1),
+	accountID int,
+	languageID int,
+	languageName varchar,
+	primary key (id),
+	foreign key(accountID) references AccountDb,
+	foreign key(languageID) references languageList
+);
+
+create procedure showLanguageLearner as
+Select LanguageLearners.languageId, LanguageLearners.accountId, languageList.languageId
+From LanguageLearners
+Inner join languageList 
+On languageList.languageId=languageList.languageName;
 
 -------------------------------------------------insert-----------------------
 
