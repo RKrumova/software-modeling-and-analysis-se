@@ -104,20 +104,19 @@ create table langUserConnection(
 );
 
 create procedure showLanguageLearner as
+begin
 Select LanguageLearners.languageId, LanguageLearners.accountId, languageList.languageId
 From LanguageLearners
 Inner join languageList 
 On languageList.languageId=languageList.languageName;
-
+end;
+--call
+showLanguageLearner (select * from LanguageLearners);
 ----
-CREATE TRIGGER deleteUser 
-    ON AccountDb
-	FOR Delete 
-	as
-		for each row
-	Begin
-    delete from Login where lOGIN.accountID = accountID;	
-	END ;;
+create trigger deleteUser on Login
+for delete as begin delete from AccountDb where AccountDb.accountID = accountID;
+end ;;
+delete from Login where accountID = 1;
 ----
 
 -------------------------------------------------insert-----------------------
