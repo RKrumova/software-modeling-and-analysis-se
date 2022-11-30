@@ -36,6 +36,25 @@ create table StudyTime(
  number int,
  EffectivenessMin decimal,
  EffectivenessMax decimal);
+  -- Users(Satisfaction
+ create table UsersSatisfaction(
+ statementEx varchar(50),
+ stDisagree decimal,
+ Disagree decimal,
+ neither decimal,
+ Agree decimal,
+ stAgree decimal,
+ -- st = strongly
+ );
+ insert into UsersSatisfaction(statementEx, stDisagree, Disagree, neither, Agree, stAgree)
+ values('Duolingo was easy to use', 0, 0,4.5, 37.9, 57.6);
+insert into UsersSatisfaction(statementEx, stDisagree, Disagree, neither, Agree, stAgree)
+values('Duolingo was helpful in studying Spanish', 0, 0, 7.6, 40.9, 51.5);
+insert into UsersSatisfaction(statementEx, stDisagree, Disagree, neither, Agree, stAgree)
+values('I enjoyed learning Spanish with Duolingo ',0, 3.0, 9.1, 45.5, 42.4);
+insert into UsersSatisfaction(statementEx, stDisagree,Disagree, neither, Agree, stAgree)
+values('I am satisfied with Duolingo ', 0, 4.5, 16.7, 40.9, 37.9);
+
 
  insert into reasonStudyEffect(Reason, number, EffectivenessMin, EffectivenessMax)
  values('Travel',10, 17.6, 22.7);
