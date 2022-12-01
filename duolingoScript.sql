@@ -118,7 +118,8 @@ for delete as begin delete from AccountDb where AccountDb.accountID = accountID;
 end ;;
 delete from Login where accountID = 1;
 ----
-Select * from AccountDb if(points > 200)
+Select * from AccountDb if(points > 200, 'Active user', 'New user') as Message 
+
 -------------------------------------------------insert-----------------------
 
 insert into AccountDb(firstName, lastName, email,phone, points, streaks)
